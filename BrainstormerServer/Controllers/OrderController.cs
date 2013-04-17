@@ -86,6 +86,18 @@ namespace PizzaServer.Controllers
             return Json(Orders.ToArray(), JsonRequestBehavior.AllowGet);
         }
 
+        public ActionResult ClearNewOrder()
+        {
+            NewOrders = new List<Order>();
+            return Json(NewOrders.ToArray(), JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult ClearOrder()
+        {
+            Orders = new List<Order>();
+            return Json(Orders.ToArray(), JsonRequestBehavior.AllowGet);
+        }
+
         /*[HttpPost]
         public ActionResult Test(JObject json)
         {
